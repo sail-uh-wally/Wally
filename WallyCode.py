@@ -214,7 +214,7 @@ Kff2 = 15
 
 # Establishing serial communication
 
-portHandler = PortHandler('COM3')
+portHandler = PortHandler('/dev/ttyUSB0')
 packetHandler = PacketHandler(2.0)
 
 portHandler.openPort()
