@@ -91,7 +91,7 @@ def ZigZag(x,y,n,H):
         elif i > 0:
             Pos[i,1] = Pos[i-1,1]
         else:
-            Pos[i,1] = y;
+            Pos[i,1] = y
     
     # print(Pos)
     X = [x]
@@ -214,7 +214,7 @@ Kff2 = 15
 
 # Establishing serial communication
 
-portHandler = PortHandler('COM3')
+portHandler = PortHandler('/dev/ttyUSB0')
 packetHandler = PacketHandler(2.0)
 
 portHandler.openPort()
@@ -242,7 +242,7 @@ print(Motor2.read())
 print("Wally will move to (0,212). Press enter to continue")
 input()
 
-WallyMove(0,212)
+WallyMove(-100,200)
 
 time.sleep(3)
 
